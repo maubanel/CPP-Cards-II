@@ -24,6 +24,8 @@ Now we are going to take off where we left with our previous C++ Visual Studio p
 <kbd></kbd> &nbsp;&nbsp; [Equal & Not Equal Operators](equal-noteq/README.md#user-content-equal--not-equal-operators) <br>
 
 
+<kbd></kbd> &nbsp;&nbsp; [Detructor](destructor/README.md#user-content-destructor) <br>
+
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE` for more information: [link](LICENSE).
