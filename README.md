@@ -19,6 +19,7 @@ Now we are going to take off where we left with our previous C++ Visual Studio p
 
 <kbd></kbd> &nbsp;&nbsp; [Structs and Classes](structs-classes/README.md#user-content-structs-and-classes) <br>
 
+<kbd></kbd> &nbsp;&nbsp; [Static Members of a Class](static-member/README.md#user-content-static-members-of-a-class) <br>
 
 <!-- LICENSE -->
 ## License
