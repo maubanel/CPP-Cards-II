@@ -30,6 +30,8 @@ Now we are going to take off where we left with our previous C++ Visual Studio p
 
 <kbd></kbd> &nbsp;&nbsp; [More on Pointers](more-pointers/README.md#user-content-more-on-pointers) <br>
 
+<kbd></kbd> &nbsp;&nbsp; [More Const](more-const/README.md#user-content-more-const) <br>
+
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE` for more information: [link](LICENSE).
