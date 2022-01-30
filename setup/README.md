@@ -184,33 +184,33 @@ Compile and run the game and look to see if the cards are lined up correctly.  I
 
 ##### `Step 22.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
+Select the camera actor and move the cards so they are centered side by side.
 
-
-![alt_text](images/.jpg)
+![alt_text](images/ClickOnActorAndCenter.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 23.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
+I adjusted it a few times until I was happy with the layout.  I leave room on top to have text that will say whether the cards are the same or not.
 
-
-![alt_text](images/.jpg)
+![alt_text](images/HappyWithLayout.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 24.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
+Press the **Call Flip Card** bool to turn over both cards.  They should default to the **Ace of Spades**.
 
-
-![alt_text](images/.jpg)
+![alt_text](images/FlipBothCardsOver.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 25.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_orange_diamond:
 
+Run the project and you the cards should now be face up.
 
-
-![alt_text](images/.jpg)
+![alt_text](images/RunGameCardsTurnedOver.jpg)
 
 ___
 
