@@ -1,12 +1,12 @@
 <img src="https://via.placeholder.com/1000x4/45D7CA/45D7CA" alt="drawing" height="4px"/>
 
-### UE4 Destructor
+### UE4 Destructor II
 
 <sub>[previous](../) • [home](../README.md#user-content-gms2-top-down-shooter) • [next](../)</sub>
 
 <img src="https://via.placeholder.com/1000x4/45D7CA/45D7CA" alt="drawing" height="4px"/>
 
-Now this number can be fixed by implementing the destructor so when a class is destroyed that it will deduct a number from the `static int NumbersOfCardsInPlay`.
+UE4 Destructor continued...
 
 <br>
 
@@ -15,71 +15,69 @@ Now this number can be fixed by implementing the destructor so when a class is d
 
 ##### `Step 1.`\|`SPCRK`|:small_blue_diamond:
 
-Now go to **Projetc Settings** and put the **Editor Startup Map** back to **L_Card_Table**.
+Now compile and run the game.  You will notice that the destructor takes a LONG time to run.  The engine handles deleting the objects and doing its own garbage collection.  We can see that this is not a good place to adjust our number of cards as the card is no longer on the play surface and is gone from the game - but still in free store memory.
 
-![alt_text](images/ResetStartupMap.jpg)
+![alt_text](images/ThirdPassStaticMember.gif)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 2.`\|`FHIU`|:small_blue_diamond: :small_blue_diamond: 
 
-Go back to **Card_Actor.h** and after the constructor add a **Destructor** `virtual ~ACardActor();`.
+Lets look at the [actor lifecycle](https://docs.unrealengine.com/en-US/Programming/UnrealArchitecture/Actors/ActorLifecycle/index.html) in UE4.  We have used the **On Construction** for updating where there is a change in the editor, there is **Begin Play** for when the play button is pressed, there is the **Tick** that runs every frame when the actor is in the scene.  Then when the actor is destroyed there is an **End Play** event.  Lets put the subtration of the card in play here.
 
-![alt_text](images/DeclareDestructor.jpg)
+![alt_text](images/EndPlayFlow.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 3.`\|`SPCRK`|:small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
- Go to the **Card_Actor.cpp** and define the destructor where all we do is decrement **NumCardsInPlay**.
+Go back to **Card_Actor.h** and delete the destructor `virtual ~ACard_Actor()`.
 
-![alt_text](images/ACard_ActorDestructorDef.jpg)
+![alt_text](images/DeleteDestructor.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 4.`\|`SPCRK`|:small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
-Run the  destroygame and you can see the destructor is run.  Strangely I have 56 cards showing up when I know I am dealing 52 cards.  Lets put a pin in this and will address this later.  I want to first destroy a card in game and see their garbage collection running.
+Go to **Card_Actor.cpp** and delete the destructor definition.
 
-![alt_text](images/SecondPassStaticMember.gif)
+![alt_text](images/DeleteDestructorDef.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 5.`\|`SPCRK`| :small_orange_diamond:
 
-Lets add the ability to right click and remove cards from the table.  This will show us when the destructor runs and how Unreal is doing its garbage collection.  Open up **BP_PlayerController** and open **Click Event Keys**.  Press the **+** button and add a **Right Mouse Button**.
+Go back to the **Card_Actor.h** and add a protected **End Play** event.
 
-![alt_text](images/AddRightMouseButtonClickToPC.jpg)
+![alt_text](images/EndPlayEvent.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 6.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond:
 
-Reopen **BP_Num_Card** and add a new Function called `UpdateText`.
+Now go to the cpp and define the **End Play** override.  All we do is call the **SUPER** and decrement from `numcardsinplay`.
 
-![alt_text](images/UpdateNumCardCardsInPlayFunc.jpg)
+![alt_text](images/EndPlayDefinition.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 7.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond:
 
-Go to the **Event Graph** and lets move all the nodes to the function.  Select all nodes except for **Begin Play** and copy and cut all the nodes.
-
-![alt_text](images/CopyAndCutBeginPlay.jpg)
+![alt_text](images/.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 8.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
-Got to the **Update Text** function and paste the nodes there.  Connect the execution node to the function node.
-
-![alt_text](images/PasteNumCardsInPlay.jpg)
+![alt_text](images/.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 9.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
-![alt_text](images/.jpg)
+ Run the game and destroy cards.  Now you will notice that as soon as it disappears from teh game surface the number goes down.  The only remaining issue is that we are having a similar problem with the constructor.  It is not representing the actual number of cards that we have constructed and used in game.  
+
+![alt_text](images/FourthPassStaticMember.gif)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
