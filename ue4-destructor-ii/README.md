@@ -63,25 +63,13 @@ Now go to the cpp and define the **End Play** override.  All we do is call the *
 
 ##### `Step 7.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond:
 
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 8.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 9.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
-
  Run the game and destroy cards.  Now you will notice that as soon as it disappears from teh game surface the number goes down.  The only remaining issue is that we are having a similar problem with the constructor.  It is not representing the actual number of cards that we have constructed and used in game.  
 
 ![alt_text](images/FourthPassStaticMember.gif)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 10.`\|`SPCRK`| :large_blue_diamond:
+##### `Step 8.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
 Go back to **Card_Actor.cpp** and delete the decrement of `NumCardsInPlay`.
 
@@ -89,7 +77,7 @@ Go back to **Card_Actor.cpp** and delete the decrement of `NumCardsInPlay`.
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 11.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: 
+##### `Step 9.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
  Instead move it to **Begin Play**.
 
@@ -97,8 +85,7 @@ Go back to **Card_Actor.cpp** and delete the decrement of `NumCardsInPlay`.
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-
-##### `Step 12.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: 
+##### `Step 10.`\|`SPCRK`| :large_blue_diamond:
 
 Now no matter how much you run the game it will always start with 52 cards which is exaclty what we want! That's it for this walk through - good job.
 
