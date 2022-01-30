@@ -108,6 +108,104 @@ Run it, and you see that the type is deduced to **int**. [In all cases, cv-quali
 
 ![alt_text](images/TypeInt.jpg)
 
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 13.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
+
+ Now try and change `L` and you will see that `const auto` forced the consteness on `L`.  You get a compile error.
+
+![alt_text](images/ConstAutoWorked.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 14.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
+
+Now literal expressions on the right hand side are **const expressions**. We know their value at compile time and would apply to build in types (5, 1.2f, 'f').  
+
+![alt_text](images/ConstLiterals.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 15.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: 
+
+ Lets just send the literal expression to `typeid`.
+
+![alt_text](images/5LiteralOutput.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 16.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond:   :small_blue_diamond: 
+
+ Run it and as before you will not see the constness of the integer using `typeid` as previously mentioned.
+
+![alt_text](images/LiteralConstMissing.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 17.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond:
+
+You can also force an `auto` to be a reference instead of a unique copy.  If you declare `auto&` before the variable name it will make it a reference to the type of the object that is derived. Try making a reference to `J` and use `auto` to derive the type.
+
+![alt_text](images/MakeAutoReference.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 18.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
+
+For a reference **typeid** returns the type of the object it is refering to, so you don't know that this variable is an alias with this method.
+
+![alt_text](images/RefShowsTypeOfRef.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 19.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
+
+Prove that `rJ` is a reference.  Lets change the value to `30`.  This should change the underlying value of **int J** from `10` to `30` through reference **rJ**. 
+
+![alt_text](images/ProveReference.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 20.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond:
+
+Run the project and you will see that the reference worked as the original value of `J` has changed through the reference whose type was derived through `auto`.
+
+![alt_text](images/RefChangedRun.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 21.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond:
+
+You can also do the same thing with pointers.  We can force the auto to be a pointer to that type by using `auto *`.
+
+![alt_text](images/ForceAutoToPointer.jpg)
+
+![alt_text](images/RefChangedRun.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 22.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond: :small_blue_diamond:
+
+Run the project and you will see that it is a **int \* __ptr64**.  Please remember that this is going to change if we were on a different platform.  It might be on a 32 bit machine and thus a different type.
+
+![alt_text](images/intpointer.jpg)
+
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 23.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
+
+Lets triple check and dereference `pJ2` and set it to `50`.  Then output the original value of `J` again.
+
+![alt_text](images/DoubleCheckPointer.jpg)
+
+<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
+
+##### `Step 24.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
+
+Run the game and notice that `J` was changed through the dereferenced point to `50`.
+
+![alt_text](images/PointerChangedRun.jpg)
 
 ___
 
