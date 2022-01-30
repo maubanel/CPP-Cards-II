@@ -46,6 +46,7 @@ Now we are going to take off where we left with our previous C++ Visual Studio p
 
 <kbd></kbd> &nbsp;&nbsp; [UE4 Static](ue4-static/README.md#user-content-ue4-static) <br>
 
+<kbd></kbd> &nbsp;&nbsp; [UE4 Destructor](ue4-destructor/README.md#user-content-ue4-destructor) <br>
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE` for more information: [link](LICENSE).
