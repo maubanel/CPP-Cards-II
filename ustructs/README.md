@@ -6,7 +6,7 @@
 
 <img src="https://via.placeholder.com/1000x4/45D7CA/45D7CA" alt="drawing" height="4px"/>
 
-Chapter introduction here.
+In Unreal we have access to UStructs so that a struct can be recognized by Unreal and used in Blueprints.  Even tough not necessary we can create a card struct that contains both enumerators.  Lets do this to show how we can use UStructs in Unreal.
 
 <br>
 
@@ -15,13 +15,17 @@ Chapter introduction here.
 
 ##### `Step 1.`\|`SPCRK`|:small_blue_diamond:
 
-![alt_text](images/.jpg)
+ Open **CardActor.h** and add after the enumerators but before the class the following new **USTRUCT**.<br><br>As with most data structures in Unreal we will use their Macro and make it accessible in blueprints (**BlueprintType**).  It will not compile unless the struct name starts with an **F** typedef.  We call the parent structures code with the **GENERATED_BODY()** Macro. We then assign two UPROPERTY's just like we do in a class (structs are practically the same).  Since a struct defaults to **public** we don't need to specifiy the keyword. This struct will consst of two enumerators an **ECardNumber** and **ECardSuit**. 
+
+![alt_text](images/UStructIniti.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 2.`\|`FHIU`|:small_blue_diamond: :small_blue_diamond: 
 
-![alt_text](images/.jpg)
+Now **delete** the **Number** and **Suit** property and replace it with a single **FCard** struct property.
+
+![alt_text](images/ReplaceEnumsWithStruct.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
