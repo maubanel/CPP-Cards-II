@@ -188,7 +188,7 @@ Now if we try and copy into `pF7` that is missing its **low-level const** gives 
 
  Comment out the line so that the project can compile again!
 
-![alt_text](images/.jpg)
+![alt_text](images/CommentOutLineToCompile.jpg)
 
 ___
 

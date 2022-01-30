@@ -32,6 +32,8 @@ Now we are going to take off where we left with our previous C++ Visual Studio p
 
 <kbd></kbd> &nbsp;&nbsp; [More Const](more-const/README.md#user-content-more-const) <br>
 
+<kbd></kbd> &nbsp;&nbsp; [Auto](auto/README.md#user-content-auto) <br>
+
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE` for more information: [link](LICENSE).
