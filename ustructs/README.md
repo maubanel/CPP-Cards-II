@@ -73,17 +73,11 @@ Now go back into the game and make sure it still works.  You should notice no di
 
 Now since this was such a fundamental change we should load up the **L_Card_Table** level and make sure it still works as well!
 
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 9.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
-
 ![alt_text](images/StillWorksInOldLevel.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 10.`\|`SPCRK`| :large_blue_diamond:
+##### `Step 9.`\|`SPCRK`| :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
 Lets double check that this struct can be accessed in a blueprint.  Open up **BP_Card_Actor** in Unreal and click on the eyball next to the **Add New +** button.  Select **Show Inherited Variables** so you can get access to the variables you have allowed access from the C++ class.
 
@@ -91,7 +85,7 @@ Lets double check that this struct can be accessed in a blueprint.  Open up **BP
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 11.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: 
+##### `Step 10.`\|`SPCRK`| :large_blue_diamond:
 
 I believe we made all of our editable cards **Card** category.  So click on it to reveal all the variables in that category.
 
@@ -99,8 +93,7 @@ I believe we made all of our editable cards **Card** category.  So click on it t
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-
-##### `Step 12.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: 
+##### `Step 11.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: 
 
 Drag **Card** variable onto the graph and select **Set Card**.
 
@@ -108,7 +101,8 @@ Drag **Card** variable onto the graph and select **Set Card**.
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 13.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
+
+##### `Step 12.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: 
 
 Right click on the **Card** pin and select **Split Struct Pin**.  
 
@@ -116,7 +110,7 @@ Right click on the **Card** pin and select **Split Struct Pin**.
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 14.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
+##### `Step 13.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
 
 You will then see our default card struct has split into its two data members.  It is available to use in blueprints.
 
@@ -124,47 +118,11 @@ You will then see our default card struct has split into its two data members.  
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
-##### `Step 15.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: 
+##### `Step 14.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
 
 Delete this node as we do not need to do anything with it.  Also for future reference you now can access this struct type in a variable.  You can go to the structure section and type *Card** - you can drop the **F** as the blueprints do not show these. Next up we will look at more on static members as well as constructors and destructors.
 
 ![alt_text](images/FindFCardStruct.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 16.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond:   :small_blue_diamond: 
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 17.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond:
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 18.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 19.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 20.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond:
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 21.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond:
-
-![alt_text](images/.jpg)
 
 ___
 
