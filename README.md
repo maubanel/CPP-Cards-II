@@ -42,6 +42,8 @@ Now we are going to take off where we left with our previous C++ Visual Studio p
 
 <kbd></kbd> &nbsp;&nbsp; [Equality in UE4 Card Class](equality/README.md#user-content-equality-in-ue4-card-class) <br>
 
+<kbd></kbd> &nbsp;&nbsp; [UStructs](ustructs/README.md#user-content-ustructs) <br>
+
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE` for more information: [link](LICENSE).
