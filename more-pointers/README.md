@@ -112,56 +112,57 @@ There is another type of pointer called a void pointer where you decide the type
 
 ##### `Step 13.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
 
-![alt_text](images/.jpg)
+So you need to tell it what type of pointer this **void \*** is dereferencing.
+
+![alt_text](images/DerefIntPointerFromVoid.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 14.`\|`SPCRK`| :large_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:  :small_blue_diamond: 
 
-![alt_text](images/.jpg)
+Compile and fix all errors.  Run it and you can see that it dereferenced it as an **int\***.
+
+![alt_text](images/PPoint4SuccDeref.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 15.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: 
 
-![alt_text](images/.jpg)
+We can assign a **void /*** ti any type.  Below we do the same thing to a **double** but make a change to the dereference. So if you run it, the pointer dereferences correctly.
+
+![alt_text](images/PointerToDouble.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 16.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond:   :small_blue_diamond: 
 
-![alt_text](images/.jpg)
+You have to be very careful because if you get the type wrong then it will interpret the reference value incorrectly.  It will try and read a double size of memory as an integer and you will get an invalid result but it will run.  Imagine the potential bugs!
+
+![alt_text](images/WrongDerefType.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 17.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond:
 
-![alt_text](images/.jpg)
+You can also have a pointer point to another pointer.  So you can point an `int **` pointer to pointer to an `int *` pointer.  So in this example we have a regular pointer to an **int** and a pointer to an **int** pointer.  To dereference the original **int** you need to double derefence this pointer with two `**`.  Run the below example on your own. Notice the original pointer shows a memory location of the original int, the pointer to pointer shows the memory location of the pointer (yours will be different but both these values HAVE to be different).  The final double dereference shows the original **int**.
+
+![alt_text](images/PointerToPointer.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 18.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
-![alt_text](images/.jpg)
+Now you can have a reference to a pointer as well.  This reference alias holds the pointer to the object it is pointing to.  So we need to dereference the underlying pointer to see the original **int**.  Type the below and look:
+
+![alt_text](images/RefToPointer.jpg)
 
 <img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
 
 ##### `Step 19.`\|`SPCRK`| :large_blue_diamond: :small_orange_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond: :small_blue_diamond:
 
-![alt_text](images/.jpg)
+You cannot have a reference to a reference.  A reference is not an object so it cannot have an associated reference.  Next up we will look at `const` a bit more.
 
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 20.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond:
-
-![alt_text](images/.jpg)
-
-<img src="https://via.placeholder.com/500x2/45D7CA/45D7CA" alt="drawing" height="2px" alt = ""/>
-
-##### `Step 21.`\|`SPCRK`| :large_blue_diamond: :large_blue_diamond: :small_blue_diamond:
-
-![alt_text](images/.jpg)
-
+![alt_text](images/NoRefToRef.jpg)
 ___
 
 
